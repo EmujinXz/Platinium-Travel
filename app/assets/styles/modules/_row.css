@@ -9,7 +9,15 @@
     margin-right: -65px;
   }
 
+  &__b-margin-until-medium {
+    margin-bottom: 2rem;
+  }
+
   @mixin atMedium {
+    &__b-margin-until-medium {
+      margin-bottom: 0rem;
+    }
+
     &__medium-4 {
       float: left;
       width: calc(100% / 12 * 4);

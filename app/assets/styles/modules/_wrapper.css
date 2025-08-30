@@ -13,9 +13,13 @@
   }
 
   &--b-margin {
-    margin-bottom: 1rem;
+    margin-bottom: 0.875rem;
 
     @mixin atSmall {
+      margin-bottom: 2rem;
+    }
+
+    @mixin atMedium {
       margin-bottom: 4rem;
     }
   }

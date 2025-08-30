@@ -11,3 +11,11 @@ img {
 * {
   box-sizing: border-box;
 }
+
+picture {
+  display: block;
+}
+
+a {
+  color: $mainOrange;
+}
