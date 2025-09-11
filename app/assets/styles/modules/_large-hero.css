@@ -16,9 +16,10 @@
   }
 
   &__title {
+    padding-top: 80px;
     font-weight: 300;
     color: $mainBlue;
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 0;
 
     @mixin atSmall {
@@ -31,15 +32,17 @@
     color: $mainBlue;
     font-size: 1.5rem;
     margin: 0;
+    display: none;
 
     @mixin atSmall {
       font-size: 2.9rem;
+      display: block;
     }
   }
 
   &__description {
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 100;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
     max-width: 30rem;
