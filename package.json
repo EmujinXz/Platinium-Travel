@@ -20,6 +20,7 @@
   "description": "",
   "dependencies": {
     "css": "^3.0.0",
+    "lazysizes": "^5.3.2",
     "lodash": "^4.17.21",
     "normalize.css": "^8.0.1"
   },

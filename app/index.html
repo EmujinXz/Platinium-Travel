@@ -32,13 +32,19 @@
         </div>
         <div class="site-header__menu-content">
           <div class="site-header__btn-container">
-            <a href="#" class="btn">Хамт аялах</a>
+            <a href="#" class="btn open-modal">Хамт аялах</a>
           </div>
           <nav class="site-header__nav site-header__nav--pull-right">
             <ul>
-              <li><a href="#our-beginning">Эхлэл</a></li>
-              <li><a href="#features">Онцлогууд</a></li>
-              <li><a href="#testimonials">Талархал</a></li>
+              <li>
+                <a href="#our-beginning" id="our-beginning-link">Эхлэл</a>
+              </li>
+              <li>
+                <a href="#features" id="features-link">Онцлогууд</a>
+              </li>
+              <li>
+                <a href="#testimonials" id="testimonials-link">Талархал</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -87,14 +93,20 @@
             Бид таны амьдралыг аз жаргал, адал явдлаар дүүргэх болно.
           </p>
           <p>
-            <a href="#" class="btn btn--orange btn--large">Өнөөдөр эхлэе</a>
+            <a href="#" class="btn btn--orange btn--large open-modal"
+              >Өнөөдөр эхлэе</a
+            >
           </p>
         </div>
       </div>
     </div>
 
     <!-- Our Beginning Section -->
-    <div id="our-beginning" class="page-section">
+    <div
+      id="our-beginning"
+      class="page-section"
+      data-matching-link="#our-beginning-link"
+    >
       <div class="wrapper">
         <h2
           class="headline headline--center headline--light headline--b-margin-small"
@@ -112,14 +124,15 @@
         <picture class="wrapper wrapper--medium wrapper--b-margin">
           <source
             sizes="(min-width: 970px) 976px, 100vw"
-            srcset="
+            data-srcset="
               assets/images/first-trip-low-res.jpg  565w,
               assets/images/first-trip.jpg          976w,
               assets/images/first-trip-hi-dpi.jpg  1952w
             "
           />
           <img
-            src="assets/images/first-trip.jpg"
+            class="lazyload"
+            data-srcset="assets/images/first-trip.jpg"
             alt="Couple walking down a street."
           />
         </picture>
@@ -128,21 +141,22 @@
           <div class="row__medium-4--larger row__b-margin-until-medium">
             <picture>
               <source
-                srcset="
+                data-srcset="
                   assets/images/our-start.jpg        404w,
                   assets/images/our-start-hi-dpi.jpg 808w
                 "
                 media="(min-width: 925px)"
               />
               <source
-                srcset="
+                data-srcset="
                   assets/images/our-start-portrait.jpg        382w,
                   assets/images/our-start-portrait-hi-dpi.jpg 764w
                 "
                 media="(min-width: 768px)"
               />
               <img
-                src="assets/images/our-start-landscape.jpg"
+                class="lazyload"
+                data-srcset="assets/images/our-start-landscape.jpg"
                 alt="Our founder, Jane Doe"
               />
             </picture>
@@ -186,7 +200,11 @@
     </div>
 
     <!-- Features Section -->
-    <div id="features" class="page-section page-section__blue">
+    <div
+      id="features"
+      class="page-section page-section__blue"
+      data-matching-link="#features-link"
+    >
       <div class="wrapper">
         <h2 class="section-title">
           <img src="assets/images/icons/star.svg" class="section-title__icon" />
@@ -253,7 +271,11 @@
     </div>
 
     <!-- Testimonials Section -->
-    <div id="testimonials" class="page-section page-section--testimonials">
+    <div
+      id="testimonials"
+      class="page-section page-section--testimonials"
+      data-matching-link="#testimonials-link"
+    >
       <div class="wrapper">
         <h2 class="section-title section-title--blue">
           <img
@@ -270,8 +292,9 @@
             <div class="testimonials">
               <div class="testimonials__photo">
                 <img
+                  class="lazyload"
                   sizes="160px"
-                  srcset="
+                  data-srcset="
                     assets/images/testimonial-jane.jpg        160w,
                     assets/images/testimonial-jane-hi-dpi.jpg 320w
                   "
@@ -295,8 +318,9 @@
             <div class="testimonials">
               <div class="testimonials__photo">
                 <img
+                  class="lazyload"
                   sizes="160px"
-                  srcset="
+                  data-srcset="
                     assets/images/testimonial-john.jpg        160w,
                     assets/images/testimonial-john-hi-dpi.jpg 320w
                   "
@@ -319,8 +343,9 @@
             <div class="testimonials testimonials--last">
               <div class="testimonials__photo">
                 <img
+                  class="lazyload"
                   sizes="160px"
-                  srcset="
+                  data-srcset="
                     assets/images/testimonial-cat.jpg        160w,
                     assets/images/testimonial-cat-hi-dpi.jpg 320w
                   "
@@ -350,13 +375,10 @@
           <span class="site-footer__text"
             >Copyright &copy; 2019 Platinum Travel. All rights reserved.</span
           >
-          <a href="#" class="btn btn--orange">Хамт аялах</a>
+          <a href="#" class="btn btn--orange open-modal">Хамт аялах</a>
         </p>
       </div>
     </footer>
-
-    <!-- Modal Section -->
-    <!-- "modal" хичээлийг үзтэлээ энэ тайлбар бүхий хэсгийг битгий нээгээрэй <div class="modal"> <div class="modal__inner"> <h2 class="section-title section-title--blue section-title--less-margin"><img src="assets/images/icons/mail.svg" class="section-title__icon"> Хамт <strong>Аялах</strong></h2> <div class="wrapper wrapper--narrow"> <p class="modal__description">Бид тун удахгүй онлайнаар захиалга өгөх системийг нээх бөгөөд, та одоогоор доорхи сошиал платформуудаар дамжиуулж бидэнтэй холбогдох боломжтой!</p> </div> <div class="social-icons"> <a href="#" class="social-icons__icon"><img src="assets/images/icons/facebook.svg" alt="Facebook"></a> <a href="#" class="social-icons__icon"><img src="assets/images/icons/twitter.svg" alt="Twitter"></a> <a href="#" class="social-icons__icon"><img src="assets/images/icons/instagram.svg" alt="Instagram"></a> <a href="#" class="social-icons__icon"><img src="assets/images/icons/youtube.svg" alt="YouTube"></a> </div> </div> <div class="modal__close">X</div> </div> This is the end of the "modal" reference HTML -->
 
     <script src="bundled.js"></script>
   </body>

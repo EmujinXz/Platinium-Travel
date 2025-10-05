@@ -1,0 +1,73 @@
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.2);
+  transition: all0.3 ease-out;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 3;
+  display: flex;
+
+  &--is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  &__inner {
+    flex: 1;
+    margin: auto;
+  }
+
+  &__description {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.65;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    font-weight: 350;
+    font-size: 4rem;
+    color: $mainBlue;
+    cursor: pointer;
+
+    &:hover {
+      color: $mainOrange;
+    }
+  }
+}
+
+.social-icons {
+  text-align: center;
+
+  div {
+    display: inline-block;
+  }
+
+  &__icon {
+    background: $mainBlue;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin: 0 10px 5px 10px;
+    position: relative;
+    border-radius: 25%;
+
+    img {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

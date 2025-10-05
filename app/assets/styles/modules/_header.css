@@ -10,7 +10,12 @@
   }
 
   @mixin atMedium {
+    position: fixed;
     background-color: #2f55724d;
+
+    &--dark {
+      background-color: rgba(23, 51, 72, 0.8);
+    }
   }
 
   &__btn-container {
@@ -56,7 +61,7 @@
 
         a {
           display: block;
-          color: #fff;
+          color: #ffffff;
           text-decoration: none;
           font-weight: 400;
           padding: 0.75rem 1.2rem;
@@ -65,6 +70,10 @@
           @mixin atMedium {
             padding: 12px 0;
             background: none;
+
+            &.is-current-link {
+              color: #fabb69;
+            }
           }
         }
       }
@@ -76,13 +85,19 @@
     transform: translateX(-50%);
     top: 0;
     position: absolute;
+    transform-origin: 50% 0;
     background: $mainBlue;
     padding: 10px 20px;
+    transition: transform 0.3s ease-out;
 
     @mixin atMedium {
       left: auto;
       transform: translateX(0);
       padding: 20px 30px;
+
+      .site-header--dark & {
+        transform: scale(0.7);
+      }
     }
   }
 

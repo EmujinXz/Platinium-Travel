@@ -3,15 +3,19 @@
   font-weight: 300;
   text-align: center;
 
-  &--blue {
-    color: $mainBlue;
-  }
-
   @mixin atSmall {
     font-size: 3.5rem;
   }
 
-  strong {
+  &--blue {
+    color: $mainBlue;
+  }
+
+  &--less-margin {
+    margin: 0 0 1.3rem 0;
+  }
+
+  &-- strong {
     font-weight: 500;
   }
 
